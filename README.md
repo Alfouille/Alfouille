@@ -2,7 +2,7 @@
 
 <h2>👨‍💻 Cybersecurity Projects:</h2>
 
-  - [Active Directory Home Lab] - EN COURS
+  - [Active Directory Home Lab](https://github.com/Alfouille/HomeLab)
 
 <h2> Certifications </h2>
 
