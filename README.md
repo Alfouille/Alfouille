@@ -12,6 +12,10 @@ Education:
 
 - Self-Taught Cyber Crusader: Graduated with honors from the School of Late-Night Hacking and Caffeine-fueled Study Sessions.
 
+Achievements:
+
+- Master of the Ctrl + Alt + Del Arts: A black belt in the ancient martial art of rebooting.
+
 <h2>👨‍💻 Cybersecurity Projects:</h2>
 
   - [Active Directory Home Lab](https://github.com/Alfouille/HomeLab)
