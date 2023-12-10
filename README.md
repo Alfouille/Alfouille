@@ -1,6 +1,6 @@
-<h1>Hi, I'm Alban <br/></h1>
+<h1>Hi, I'm Alban 🧙‍♂️🔐✨ <br/></h1>
 
-Skills & Superpowers:
+🔧⚔️🛡️ Skills & Superpowers:
 
 - Security Sorcerer: Casting spells to ward off evil packets and protect digital kingdoms.
 
@@ -8,11 +8,11 @@ Skills & Superpowers:
 
 - Firewall Juggler: Keeping multiple flaming hoops in the air because, you know, multitasking is my middle name.
 
-Education:
+🎓🔍💡 Education:
 
 - Self-Taught Cyber Crusader: Graduated with honors from the School of Late-Night Hacking and Caffeine-fueled Study Sessions.
 
-Achievements:
+🏆🧠🤓 Achievements:
 
 - Master of the Ctrl + Alt + Del Arts: A black belt in the ancient martial art of rebooting.
 
