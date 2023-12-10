@@ -1,5 +1,17 @@
 <h1>Hi, I'm Alban <br/></h1>
 
+Skills & Superpowers:
+
+- Security Sorcerer: Casting spells to ward off evil packets and protect digital kingdoms.
+
+- Code Ninja: Stealthily navigating through the shadows of code to uncover vulnerabilities.
+
+- Firewall Juggler: Keeping multiple flaming hoops in the air because, you know, multitasking is my middle name.
+
+Education:
+
+- Self-Taught Cyber Crusader: Graduated with honors from the School of Late-Night Hacking and Caffeine-fueled Study Sessions.
+
 <h2>👨‍💻 Cybersecurity Projects:</h2>
 
   - [Active Directory Home Lab](https://github.com/Alfouille/HomeLab)
