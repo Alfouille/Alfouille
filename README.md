@@ -1,58 +1,43 @@
-<h1>Hi, I'm Alban 🧙‍♂️🔐✨ <br/></h1>
+<p align="center">
+  <img src="./assets/alfouille-banner.svg" alt="Alfouille — Entrepreneur, formateur et builder" width="100%" />
+</p>
 
-🔧⚔️🛡️ Skills & Superpowers:
+## Je construis des outils utiles.
 
-- Security Sorcerer: Casting spells to ward off evil packets and protect digital kingdoms.
+Je m'appelle **Alban**, alias **Alfouille**. Entrepreneur et formateur informatique, je travaille à la croisée de l'**intelligence artificielle**, de la **cybersécurité** et de l'**automatisation**.
 
-- Code Ninja: Stealthily navigating through the shadows of code to uncover vulnerabilities.
+Mon fil conducteur est simple : rendre la technologie plus claire, plus accessible et réellement utile. Pas de promesse magique, pas de jargon pour le plaisir — des projets concrets, testés sur le terrain.
 
-- Firewall Juggler: Keeping multiple flaming hoops in the air because, you know, multitasking is my middle name.
+### En production
 
-🎓🔍💡 Education:
+| Projet | Ce que j'y construis |
+| --- | --- |
+| [**Notit-IA**](https://notit-ia.app/) | Une application francophone pour comprendre l'IA sans se perdre dans le jargon : lexique pédagogique, guides pratiques et comparatifs sourcés. |
+| [**OutilsLocaux**](https://outilslocaux.fr/) | Des outils gratuits qui fonctionnent directement dans le navigateur. Pas de compte, pas d'envoi de fichiers, pas de collecte inutile. |
+| [**BlackShield Web**](https://web.blackshield-intel.fr/) | Des sites modernes et accessibles pour les artisans, commerçants et indépendants, avec un ancrage local dans le Loiret. |
 
-- Self-Taught Cyber Crusader: Graduated with honors from the School of Late-Night Hacking and Caffeine-fueled Study Sessions.
+### Je construis en public
 
-🏆🧠🤓 Achievements:
+Sur [**X / Twitter**](https://x.com/Alfouille), je documente les coulisses : idées, choix techniques, coûts, erreurs, trafic, monétisation et changements de cap.
 
-- Master of the Ctrl + Alt + Del Arts: A black belt in the ancient martial art of rebooting.
+Je montre le chantier, pas uniquement la façade.
 
-<h2>👨‍💻 Cybersecurity Projects:</h2>
+### Je transmets aussi
 
-  - [Active Directory Home Lab](https://github.com/Alfouille/HomeLab)
+Mon rôle de **formateur** nourrit directement ma manière de construire : expliquer sans infantiliser, partir d'un besoin réel et rendre les personnes autonomes. La pédagogie n'est pas une couche ajoutée à mes projets — elle en fait partie dès le départ.
 
-<h2> Certifications </h2>
+### Mes terrains de jeu
 
-  - [Jedha Cybersécurité](https://www.jedha.co/formations/formation-analyste-cyber)
-  - [Google Cybersecurity Certificat Professionnel](https://www.coursera.org/google-certificates/cybersecurity-certificate?action=enroll&aid=true)
-  
-<h2>📺 Popular YouTube Videos</h2>
+`IA appliquée` · `Automatisation` · `Cybersécurité` · `OSINT` · `Python` · `FastAPI` · `PowerShell` · `Docker` · `Linux` · `n8n`
 
-- [How to get into Cybersecurity Starting From Zero](https://www.youtube.com/watch?v=a83ASGn_V_s)
+---
 
+> Le temps et l'énergie sont précieux. La technologie doit nous aider à mieux les utiliser.
 
-<h2> 🤳 Connect with me:</h2>
-
-[<img align="left" alt="JoshMadakor | YouTube" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/youtube.svg" />][youtube]
-[<img align="left" alt="JoshMadakor | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
-[<img align="left" alt="JoshMadakor | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
-[<img align="left" alt="JoshMadakor | Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />][instagram]
-
-[twitter]: https://twitter.com/Alfouille
-[youtube]: https://www.youtube.com/c/Alfouille45
-[instagram]: https://www.instagram.com/
-[linkedin]: https://linkedin.com/in/
-
-<!--
-**joshmadakor1/joshmadakor1** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<p align="center">
+  <a href="https://alfouille.blackshield-intel.fr/"><strong>Mon univers</strong></a>
+  &nbsp;·&nbsp;
+  <a href="https://x.com/Alfouille"><strong>Suivre le BuildInPublic</strong></a>
+  <br /><br />
+  Toujours là 🦀💪🏻
+</p>
