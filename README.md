@@ -16,6 +16,10 @@ Mon fil conducteur est simple : rendre la technologie plus claire, plus accessib
 | [**OutilsLocaux**](https://outilslocaux.fr/) | Des outils gratuits qui fonctionnent directement dans le navigateur. Pas de compte, pas d'envoi de fichiers, pas de collecte inutile. |
 | [**BlackShield Web**](https://web.blackshield-intel.fr/) | Des sites modernes et accessibles pour les artisans, commerçants et indépendants, avec un ancrage local dans le Loiret. |
 
+### Le chantier ouvert
+
+[**BRIQUE**](./brique/) est un journal BuildInPublic local et sans compte, développé une micro-brique utile à la fois.
+
 ### Je construis en public
 
 Sur [**X / Twitter**](https://x.com/Alfouille), je documente les coulisses : idées, choix techniques, coûts, erreurs, trafic, monétisation et changements de cap.

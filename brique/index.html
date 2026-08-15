@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="BRIQUE, un journal BuildInPublic minimaliste qui conserve vos notes dans le navigateur."
+    />
+    <title>BRIQUE — Journal BuildInPublic local</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="../">ALFOUILLE</a>
+      <span aria-hidden="true">/</span>
+      <span>LAB</span>
+      <span aria-hidden="true">/</span>
+      <strong>BRIQUE</strong>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <p class="eyebrow">JOURNAL LOCAL · ZÉRO COMPTE</p>
+        <h1 id="page-title">Les petits progrès méritent une trace.</h1>
+        <p>
+          Notez ce qui a réellement avancé. Les entrées restent dans votre
+          navigateur et ne sont envoyées nulle part.
+        </p>
+      </section>
+
+      <div class="workspace">
+        <section class="panel" aria-labelledby="new-entry-title">
+          <div class="panel-heading">
+            <p class="step">01</p>
+            <h2 id="new-entry-title">Poser une brique</h2>
+          </div>
+
+          <form id="entry-form">
+            <label for="project">Projet</label>
+            <select id="project" name="project">
+              <option value="Notit-IA">Notit-IA</option>
+              <option value="OutilsLocaux">OutilsLocaux</option>
+              <option value="BlackShield Web">BlackShield Web</option>
+              <option value="Autre">Autre</option>
+            </select>
+
+            <label for="note">Qu'est-ce qui a avancé ?</label>
+            <textarea
+              id="note"
+              name="note"
+              rows="6"
+              maxlength="600"
+              placeholder="Une amélioration livrée, un test terminé, une décision prise…"
+              required
+            ></textarea>
+
+            <button type="submit">Ajouter au journal</button>
+            <p class="form-note">Enregistré uniquement sur cet appareil.</p>
+            <p id="form-status" class="sr-only" aria-live="polite"></p>
+          </form>
+        </section>
+
+        <section class="panel" aria-labelledby="journal-title">
+          <div class="panel-heading">
+            <p class="step">02</p>
+            <h2 id="journal-title">Journal</h2>
+            <span id="entry-count" class="count">0 brique</span>
+          </div>
+
+          <p id="empty-state" class="empty-state">
+            Rien pour le moment. La première brique est souvent la plus importante.
+          </p>
+          <ol id="entry-list" class="entry-list" aria-live="polite"></ol>
+        </section>
+      </div>
+    </main>
+
+    <template id="entry-template">
+      <li class="entry">
+        <div class="entry-meta">
+          <strong class="entry-project"></strong>
+          <time class="entry-date"></time>
+        </div>
+        <p class="entry-note"></p>
+      </li>
+    </template>
+
+    <footer>
+      <span>BRIQUE v0.1</span>
+      <span>Construit une étape à la fois.</span>
+    </footer>
+  </body>
+</html>
