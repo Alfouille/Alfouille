@@ -3,6 +3,7 @@ const STORAGE_KEY = "brique.entries.v1";
 const form = document.querySelector("#entry-form");
 const projectField = document.querySelector("#project");
 const noteField = document.querySelector("#note");
+const noteCount = document.querySelector("#note-count");
 const entryList = document.querySelector("#entry-list");
 const entryTemplate = document.querySelector("#entry-template");
 const entryCount = document.querySelector("#entry-count");
@@ -31,6 +32,10 @@ function formatDate(value) {
   }).format(new Date(value));
 }
 
+function updateNoteCount() {
+  noteCount.textContent = `${noteField.value.length} / ${noteField.maxLength} caractères`;
+}
+
 function renderEntries() {
   entryList.replaceChildren();
 
@@ -48,6 +53,8 @@ function renderEntries() {
   emptyState.hidden = entries.length > 0;
   entryCount.textContent = `${entries.length} ${entries.length > 1 ? "briques" : "brique"}`;
 }
+
+noteField.addEventListener("input", updateNoteCount);
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -68,8 +75,10 @@ form.addEventListener("submit", (event) => {
   saveEntries();
   renderEntries();
   noteField.value = "";
+  updateNoteCount();
   noteField.focus();
   formStatus.textContent = "La brique a été ajoutée au journal local.";
 });
 
+updateNoteCount();
 renderEntries();

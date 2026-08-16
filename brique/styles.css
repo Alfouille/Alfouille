@@ -209,6 +209,15 @@ button:hover {
   text-align: center;
 }
 
+.character-count {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
 .empty-state {
   margin: 48px auto;
   max-width: 340px;

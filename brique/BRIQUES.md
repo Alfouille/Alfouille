@@ -4,7 +4,7 @@ Chaque tâche doit rester assez petite pour tenir dans un commit lisible et vér
 
 ## Journal
 
-- [ ] Ajouter un compteur de caractères à la note.
+- [x] Ajouter un compteur de caractères à la note.
 - [ ] Permettre de modifier une entrée existante.
 - [ ] Ajouter une suppression avec confirmation.
 - [ ] Permettre d'épingler une entrée importante.
