@@ -1,6 +1,8 @@
 const STORAGE_KEY = "brique.entries.v1";
 
 const form = document.querySelector("#entry-form");
+const submitButton = document.querySelector("#submit-entry");
+const cancelEditButton = document.querySelector("#cancel-edit");
 const projectField = document.querySelector("#project");
 const noteField = document.querySelector("#note");
 const noteCount = document.querySelector("#note-count");
@@ -11,6 +13,7 @@ const emptyState = document.querySelector("#empty-state");
 const formStatus = document.querySelector("#form-status");
 
 let entries = loadEntries();
+let editingEntryId = null;
 
 function loadEntries() {
   try {
@@ -36,15 +39,42 @@ function updateNoteCount() {
   noteCount.textContent = `${noteField.value.length} / ${noteField.maxLength} caractères`;
 }
 
+function resetEditor() {
+  editingEntryId = null;
+  noteField.value = "";
+  submitButton.textContent = "Ajouter au journal";
+  cancelEditButton.hidden = true;
+  updateNoteCount();
+}
+
+function startEditing(entryId) {
+  const entry = entries.find((candidate) => candidate.id === entryId);
+  if (!entry) {
+    return;
+  }
+
+  editingEntryId = entry.id;
+  projectField.value = entry.project;
+  noteField.value = entry.note;
+  submitButton.textContent = "Enregistrer les modifications";
+  cancelEditButton.hidden = false;
+  updateNoteCount();
+  noteField.focus();
+  formStatus.textContent = "Modification de la brique en cours.";
+}
+
 function renderEntries() {
   entryList.replaceChildren();
 
   for (const entry of entries) {
     const fragment = entryTemplate.content.cloneNode(true);
     const time = fragment.querySelector(".entry-date");
+    const editButton = fragment.querySelector(".entry-edit");
 
     fragment.querySelector(".entry-project").textContent = entry.project;
     fragment.querySelector(".entry-note").textContent = entry.note;
+    editButton.setAttribute("aria-label", `Modifier la brique ${entry.project}`);
+    editButton.addEventListener("click", () => startEditing(entry.id));
     time.dateTime = entry.createdAt;
     time.textContent = formatDate(entry.createdAt);
     entryList.append(fragment);
@@ -56,6 +86,12 @@ function renderEntries() {
 
 noteField.addEventListener("input", updateNoteCount);
 
+cancelEditButton.addEventListener("click", () => {
+  resetEditor();
+  noteField.focus();
+  formStatus.textContent = "La modification a été annulée.";
+});
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
@@ -65,19 +101,37 @@ form.addEventListener("submit", (event) => {
     return;
   }
 
-  entries.unshift({
-    id: crypto.randomUUID(),
-    project: projectField.value,
-    note,
-    createdAt: new Date().toISOString(),
-  });
+  const isEditing = editingEntryId !== null;
+
+  if (isEditing && !entries.some((entry) => entry.id === editingEntryId)) {
+    resetEditor();
+    noteField.focus();
+    formStatus.textContent = "Cette brique n'existe plus dans le journal.";
+    return;
+  }
+
+  if (isEditing) {
+    entries = entries.map((entry) =>
+      entry.id === editingEntryId
+        ? { ...entry, project: projectField.value, note }
+        : entry,
+    );
+  } else {
+    entries.unshift({
+      id: crypto.randomUUID(),
+      project: projectField.value,
+      note,
+      createdAt: new Date().toISOString(),
+    });
+  }
 
   saveEntries();
   renderEntries();
-  noteField.value = "";
-  updateNoteCount();
+  resetEditor();
   noteField.focus();
-  formStatus.textContent = "La brique a été ajoutée au journal local.";
+  formStatus.textContent = isEditing
+    ? "La brique a été modifiée dans le journal local."
+    : "La brique a été ajoutée au journal local.";
 });
 
 updateNoteCount();

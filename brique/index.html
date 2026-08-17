@@ -58,7 +58,12 @@
             ></textarea>
             <p id="note-count" class="character-count">0 / 600 caractères</p>
 
-            <button type="submit">Ajouter au journal</button>
+            <div class="form-actions">
+              <button id="submit-entry" type="submit">Ajouter au journal</button>
+              <button id="cancel-edit" class="button-secondary" type="button" hidden>
+                Annuler
+              </button>
+            </div>
             <p class="form-note">Enregistré uniquement sur cet appareil.</p>
             <p id="form-status" class="sr-only" aria-live="polite"></p>
           </form>
@@ -86,6 +91,7 @@
           <time class="entry-date"></time>
         </div>
         <p class="entry-note"></p>
+        <button class="entry-edit" type="button">Modifier</button>
       </li>
     </template>
 

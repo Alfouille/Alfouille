@@ -197,6 +197,39 @@ button:hover {
   background: var(--accent-strong);
 }
 
+button[hidden] {
+  display: none;
+}
+
+.form-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.form-actions button {
+  flex: 1;
+}
+
+.button-secondary,
+.entry-edit {
+  border-color: var(--line);
+  background: transparent;
+  color: var(--text);
+}
+
+.button-secondary:hover,
+.entry-edit:hover {
+  border-color: var(--accent);
+  background: rgba(78, 225, 160, 0.08);
+}
+
+.entry-edit {
+  width: auto;
+  margin-top: 14px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+}
+
 .form-note,
 .empty-state {
   color: var(--muted);
