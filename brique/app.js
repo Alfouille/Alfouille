@@ -63,6 +63,30 @@ function startEditing(entryId) {
   formStatus.textContent = "Modification de la brique en cours.";
 }
 
+function deleteEntry(entryId) {
+  const entry = entries.find((candidate) => candidate.id === entryId);
+  if (!entry) {
+    return;
+  }
+
+  const confirmed = window.confirm(
+    `Supprimer cette brique de ${entry.project} ? Cette action est définitive.`,
+  );
+  if (!confirmed) {
+    return;
+  }
+
+  entries = entries.filter((candidate) => candidate.id !== entryId);
+
+  if (editingEntryId === entryId) {
+    resetEditor();
+  }
+
+  saveEntries();
+  renderEntries();
+  formStatus.textContent = "La brique a été supprimée du journal local.";
+}
+
 function renderEntries() {
   entryList.replaceChildren();
 
@@ -70,11 +94,14 @@ function renderEntries() {
     const fragment = entryTemplate.content.cloneNode(true);
     const time = fragment.querySelector(".entry-date");
     const editButton = fragment.querySelector(".entry-edit");
+    const deleteButton = fragment.querySelector(".entry-delete");
 
     fragment.querySelector(".entry-project").textContent = entry.project;
     fragment.querySelector(".entry-note").textContent = entry.note;
     editButton.setAttribute("aria-label", `Modifier la brique ${entry.project}`);
     editButton.addEventListener("click", () => startEditing(entry.id));
+    deleteButton.setAttribute("aria-label", `Supprimer la brique ${entry.project}`);
+    deleteButton.addEventListener("click", () => deleteEntry(entry.id));
     time.dateTime = entry.createdAt;
     time.textContent = formatDate(entry.createdAt);
     entryList.append(fragment);
