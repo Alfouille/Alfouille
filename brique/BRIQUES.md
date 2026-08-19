@@ -7,7 +7,7 @@ Chaque tâche doit rester assez petite pour tenir dans un commit lisible et vér
 - [x] Ajouter un compteur de caractères à la note.
 - [x] Permettre de modifier une entrée existante.
 - [x] Ajouter une suppression avec confirmation.
-- [ ] Permettre d'épingler une entrée importante.
+- [x] Permettre d'épingler une entrée importante.
 - [ ] Ajouter des tags libres aux entrées.
 - [ ] Filtrer le journal par projet.
 - [ ] Rechercher dans le texte des entrées.

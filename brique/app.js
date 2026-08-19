@@ -87,17 +87,50 @@ function deleteEntry(entryId) {
   formStatus.textContent = "La brique a été supprimée du journal local.";
 }
 
+function togglePinnedEntry(entryId) {
+  const entry = entries.find((candidate) => candidate.id === entryId);
+  if (!entry) {
+    return;
+  }
+
+  const isPinned = !entry.pinned;
+  entries = entries.map((candidate) =>
+    candidate.id === entryId ? { ...candidate, pinned: isPinned } : candidate,
+  );
+
+  saveEntries();
+  renderEntries();
+  formStatus.textContent = isPinned
+    ? "La brique a été épinglée dans le journal local."
+    : "La brique a été désépinglée du journal local.";
+}
+
 function renderEntries() {
   entryList.replaceChildren();
 
-  for (const entry of entries) {
+  const displayedEntries = [
+    ...entries.filter((entry) => entry.pinned),
+    ...entries.filter((entry) => !entry.pinned),
+  ];
+
+  for (const entry of displayedEntries) {
     const fragment = entryTemplate.content.cloneNode(true);
+    const entryElement = fragment.querySelector(".entry");
     const time = fragment.querySelector(".entry-date");
+    const pinButton = fragment.querySelector(".entry-pin");
     const editButton = fragment.querySelector(".entry-edit");
     const deleteButton = fragment.querySelector(".entry-delete");
 
     fragment.querySelector(".entry-project").textContent = entry.project;
     fragment.querySelector(".entry-note").textContent = entry.note;
+    entryElement.classList.toggle("entry-pinned", Boolean(entry.pinned));
+    pinButton.textContent = entry.pinned ? "Désépingler" : "Épingler";
+    pinButton.setAttribute("aria-pressed", String(Boolean(entry.pinned)));
+    pinButton.setAttribute(
+      "aria-label",
+      `${entry.pinned ? "Désépingler" : "Épingler"} la brique ${entry.project}`,
+    );
+    pinButton.addEventListener("click", () => togglePinnedEntry(entry.id));
     editButton.setAttribute("aria-label", `Modifier la brique ${entry.project}`);
     editButton.addEventListener("click", () => startEditing(entry.id));
     deleteButton.setAttribute("aria-label", `Supprimer la brique ${entry.project}`);

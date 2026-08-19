@@ -8,6 +8,7 @@
   --accent: #4ee1a0;
   --accent-strong: #72f2b7;
   --danger: #ff8b96;
+  --pin: #f6c85f;
   --radius: 14px;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -212,6 +213,7 @@ button[hidden] {
 }
 
 .button-secondary,
+.entry-pin,
 .entry-edit,
 .entry-delete {
   border-color: var(--line);
@@ -220,6 +222,7 @@ button[hidden] {
 }
 
 .button-secondary:hover,
+.entry-pin:hover,
 .entry-edit:hover {
   border-color: var(--accent);
   background: rgba(78, 225, 160, 0.08);
@@ -232,12 +235,19 @@ button[hidden] {
   margin-top: 14px;
 }
 
+.entry-pin,
 .entry-edit,
 .entry-delete {
   width: auto;
   margin-top: 0;
   padding: 8px 12px;
   font-size: 0.78rem;
+}
+
+.entry-pin[aria-pressed="true"] {
+  border-color: var(--pin);
+  background: rgba(246, 200, 95, 0.08);
+  color: var(--pin);
 }
 
 .entry-delete {
@@ -289,6 +299,10 @@ button[hidden] {
   padding: 18px;
   border-left: 3px solid var(--accent);
   background: #0b1016;
+}
+
+.entry-pinned {
+  border-left-color: var(--pin);
 }
 
 .entry-meta {
